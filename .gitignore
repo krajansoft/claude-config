@@ -1,0 +1,28 @@
+# Pliki osobiste i cache - nie wrzucaj na GitHub
+backups/
+cache/
+file-history/
+ide/
+plugins/
+projects/
+session-env/
+sessions/
+shell-snapshots/
+tasks/
+telemetry/
+memory/
+
+# Pliki konfiguracyjne z osobistymi danymi
+.credentials.json
+.last-cleanup
+history.jsonl
+stats-cache.json
+settings.json
+settings.local.json
+
+# Hooki - zawierają ścieżki specyficzne dla tego komputera
+hooks/
+
+# System
+.DS_Store
+Thumbs.db
