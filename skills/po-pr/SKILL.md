@@ -19,7 +19,11 @@ Użyj Bash tool: `git -C "C:\Users\adamk\.claude" status --short`
 Jeśli są zmiany — przypomnij: "Najpierw wywołaj /git-commit."
 Zakończ.
 
-### Krok 3: PR Review
+### Krok 3: Regresja
+Uruchom przez Bash tool: `node "C:\Users\adamk\.claude\tests\regression\suite.js"`
+Jeśli wynik zawiera "BLOKUJĄCE" — zatrzymaj się. Nie twórz PR.
+
+### Krok 4: PR Review
 Pobierz diff przez Bash tool:
 `git -C "C:\Users\adamk\.claude" diff master...HEAD --stat`
 `git -C "C:\Users\adamk\.claude" diff master...HEAD`
@@ -30,22 +34,22 @@ Wywołaj agenta kod-reviewer przekazując pobrany diff w treści:
 Jeśli WYNIK to 🔴 BLOKUJĄCE — zatrzymaj się i pokaż raport. Nie twórz PR.
 Jeśli WYNIK to ⚠️ WYMAGA POPRAWEK — pokaż raport i zapytaj: "Kontynuować mimo uwag?"
 
-### Krok 4: Push brancha
+### Krok 5: Push brancha
 Użyj Bash tool: `git -C "C:\Users\adamk\.claude" push -u origin [nazwa-brancha]`
 
-### Krok 5: Utwórz PR
+### Krok 6: Utwórz PR
 Tytuł: zamień myślniki w nazwie brancha na spacje, usuń prefiks "task/", capitalize.
 Użyj Bash tool:
 `gh pr create --repo krajansoft/claude-config --base master --head [nazwa-brancha] --title "[tytuł]" --body "Zmiany z brancha [nazwa-brancha]. Review: kod-reviewer PR checklist zaliczony."`
 
-### Krok 6: Pobierz URL PR
+### Krok 7: Pobierz URL PR
 Użyj Bash tool: `gh pr view --repo krajansoft/claude-config [nazwa-brancha] --json url -q .url`
 
-### Krok 7: Zapisz PR w Todoist
+### Krok 8: Zapisz PR w Todoist
 Znajdź aktywne zadanie w sekcji "W trakcie" (ID: 6gj92pQqwMR2C3jq).
 Dodaj komentarz przez MCP: "PR: [URL]"
 
-### Krok 8: Wyświetl podsumowanie
+### Krok 9: Wyświetl podsumowanie
 
 ```
 ════════════════════════════════════
