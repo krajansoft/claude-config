@@ -3,6 +3,8 @@ description: Diagnozuje i naprawia błędy w kodzie. Użyj gdy masz błąd, coś
 argument-hint: [opis błędu lub wklejony error]
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Błąd do naprawienia
 
 $ARGUMENTS

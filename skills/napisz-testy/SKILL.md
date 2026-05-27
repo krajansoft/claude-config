@@ -3,6 +3,8 @@ description: Pisze testy dla istniejącego kodu. Użyj gdy chcesz przetestować 
 argument-hint: [nazwa pliku lub funkcji do przetestowania]
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Co testować
 
 $ARGUMENTS
