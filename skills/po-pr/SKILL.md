@@ -19,6 +19,12 @@ Użyj Bash tool: `git -C "C:\Users\adamk\.claude" status --short`
 Jeśli są zmiany — przypomnij: "Najpierw wywołaj /git-commit."
 Zakończ.
 
+### Krok 2b: Sprawdź auth GitHub CLI
+Użyj Bash tool: `gh auth status 2>&1`
+Jeśli wynik zawiera "not logged in" lub "no accounts" lub exit code ≠ 0 — zatrzymaj się:
+"⚠️ GitHub CLI nie jest zalogowane. Uruchom: gh auth login"
+Zakończ.
+
 ### Krok 3: Regresja
 Uruchom przez Bash tool: `node "C:\Users\adamk\.claude\tests\regression\suite.js"`
 Jeśli wynik zawiera "BLOKUJĄCE" — zatrzymaj się. Nie twórz PR.
