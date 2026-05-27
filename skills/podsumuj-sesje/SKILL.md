@@ -52,9 +52,25 @@ Dodaj do każdego komentarz z punktu 1 podsumowania (co zostało zrobione).
 
 ### Krok 2 — Zgłoś bugi
 Jeśli w punkcie 3 podsumowania (Uwagi) znalazłeś potencjalne błędy lub ryzyko —
-stwórz dla każdego osobne zadanie w sekcji "Bugi" z priorytetem p2.
+stwórz dla każdego osobne zadanie w sekcji "Bugi" z priorytetem p1/p2/p3.
 Nazwa zadania: "BUG: [krótki opis]"
-Opis zadania: szczegółowy opis z punktu Uwagi.
+
+Opis taska w formacie zgodnym z /zgłoś-bug:
+```
+Źródło: [SKILL/AGENT/HOOK/CONFIG/HUMAN — na podstawie kontekstu błędu]
+Klasyfikacja: [🔴 KRYTYCZNY / 🟡 POWAŻNY / 🟢 DROBNY]
+Estymata naprawy: [N]k tokenów (~$[X.XX] / ~[Y.YY] PLN)
+
+Opis: [szczegółowy opis z punktu Uwagi]
+
+Oczekiwane: [co powinno być]
+Rzeczywiste: [co jest]
+```
+
+Estymaty orientacyjne:
+- 🟢 DROBNY (prosta zmiana 1 pliku): ~5k tokenów → ~$0.10 (~0.40 PLN)
+- 🟡 POWAŻNY (kilka plików, wymaga dochodzenia): ~20k tokenów → ~$0.40 (~1.60 PLN)
+- 🔴 KRYTYCZNY (blokuje workflow, złożona naprawa): ~50k tokenów → ~$1.00 (~4.00 PLN)
 
 ### Krok 3 — Zaplanuj następną sesję
 Na podstawie punktu 4 podsumowania (Co dalej) — stwórz zadania w sekcji "Backlog".
