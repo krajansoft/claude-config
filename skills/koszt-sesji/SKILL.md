@@ -89,8 +89,11 @@ Dla cache write/read jeśli niedostępne — podaj 0 lub "n/d".
 
 Po wyświetleniu raportu w CLI wykonaj automatycznie:
 
-1. Znajdź aktywne zadanie w sekcji "W trakcie" w projekcie
-   Mój Dashboard (ID: 6gj92jFJMwm2RmFq, sekcja: 6gj92pQqwMR2C3jq).
+1. Znajdź zadanie do zapisu kosztu — w tej kolejności:
+   a) Sprawdź sekcję "W trakcie" (6gj92pQqwMR2C3jq) — jeśli jest task, użyj go.
+   b) Jeśli W trakcie jest puste — sprawdź sekcję "Zrobione" (6gj92pRv86Mh4Rvq)
+      i użyj PIERWSZEGO taska z listy (najnowszy przeniesiony).
+   c) Jeśli obie sekcje puste — wyświetl ostrzeżenie i zakończ.
 
 2. Pobierz wszystkie komentarze tego zadania i policz te które
    zaczynają się od "💰 Koszt sesji". Numer nowej sesji = liczba + 1.
@@ -103,10 +106,11 @@ Model: [model] | Agenci: [lista|—]
 Skille: [lista|—] | MCP: [N] ops
 Wskaz: [1 zdanie]
 
-Jeśli nie ma aktywnego zadania w "W trakcie" — NIE zapisuj komentarza.
-Wyświetl ostrzeżenie i zakończ:
+Jeśli fallback na Zrobione — dopisz na końcu pierwszej linii: "(zapisano po zamknięciu taska)"
 
-⚠️ Brak aktywnego taska w 'W trakcie' — komentarz kosztowy nie został zapisany.
+Jeśli obie sekcje puste — NIE zapisuj komentarza. Wyświetl ostrzeżenie:
+
+⚠️ Brak taska w 'W trakcie' i 'Zrobione' — komentarz kosztowy nie został zapisany.
 Uruchom /po-plan żeby wskazać task sesji przed zapisem kosztów.
 
 Nie pytaj o pozwolenie — wykonaj automatycznie.

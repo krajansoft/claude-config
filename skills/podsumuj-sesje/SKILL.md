@@ -32,6 +32,20 @@ Sekcje:
 - Bugi:       6gj92pQjFpC8gfrH
 - Zrobione:   6gj92pRv86Mh4Rvq
 
+### Krok 0 — Zapisz koszt sesji (WYKONAJ PRZED PRZENIESIENIEM TASKA)
+Znajdź aktywny task w sekcji "W trakcie" (6gj92pQqwMR2C3jq).
+Pobierz jego komentarze i policz te zaczynające się od "💰 Koszt sesji".
+Jeśli NIE MA żadnego komentarza kosztowego z DZISIEJSZEJ daty — dodaj go teraz:
+
+```
+💰 Koszt sesji #[liczba+1] — [data]
+Tokeny: dane niedostępne — koszt szacunkowy z /podsumuj-sesje
+Sesja: [1 zdanie co było robione]
+```
+
+Jeśli komentarz kosztowy z dzisiaj JUŻ ISTNIEJE — pomiń ten krok.
+Jeśli sekcja W trakcie jest pusta — pomiń ten krok.
+
 ### Krok 1 — Zamknij aktywne zadania
 Znajdź wszystkie zadania w sekcji "W trakcie" i przenieś je do sekcji "Zrobione".
 Dodaj do każdego komentarz z punktu 1 podsumowania (co zostało zrobione).
@@ -49,8 +63,8 @@ Nazwa zadania powinna być konkretna i zaczynać się od czasownika, np. "Dodaj 
 
 ## Łączny koszt taska
 
-Po wykonaniu kroków 1-3 — pobierz WSZYSTKIE komentarze aktywnego taska
-(przed przeniesieniem do Zrobione) i znajdź te zaczynające się od "💰 Koszt sesji".
+Po wykonaniu kroków 1-3 — pobierz WSZYSTKIE komentarze taska (teraz już w sekcji Zrobione)
+i znajdź te zaczynające się od "💰 Koszt sesji".
 Zsumuj z nich łączne tokeny (input + output) i łączny koszt w USD i PLN.
 
 Wyświetl podsumowanie w CLI:
