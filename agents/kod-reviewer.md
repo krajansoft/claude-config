@@ -2,7 +2,7 @@
 name: kod-reviewer
 description: Przegląda kod i ocenia jego jakość. Wywołaj z "PR review" lub "tryb PR" żeby użyć checklisty 12 punktów dla brancha claude-config. Standardowo: sprawdza czytelność, poprawność, bezpieczeństwo i spójność kodu.
 tools: Read, Glob, Grep, Bash
-model: haiku
+model: sonnet
 color: blue
 ---
 
