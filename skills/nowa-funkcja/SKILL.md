@@ -4,6 +4,8 @@ argument-hint: [nazwa - opis co ma robić]
 disable-model-invocation: true
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Żądanie
 
 $ARGUMENTS

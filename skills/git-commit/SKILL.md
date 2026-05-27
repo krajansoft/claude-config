@@ -1,6 +1,9 @@
 ---
 description: Przegląda zmiany i tworzy commit z dobrym opisem. Wywołuj ręcznie gdy chcesz zacommitować swoją pracę.
 ---
+
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Zmiany do zacommitowania
 !`git status --short`
 !`git diff HEAD --stat`

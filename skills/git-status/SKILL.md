@@ -2,6 +2,8 @@
 description: Pokazuje aktualny stan repozytorium git. Użyj gdy chcesz wiedzieć na jakiej jesteś gałęzi, co jest niezacommitowane, czy jesteś zsynchronizowany ze zdalnym repo, lub gdy pytasz "co się dzieje z gitem" / "jaki jest stan projektu".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Stan repozytorium
 
 !`git status`

@@ -2,6 +2,8 @@
 description: Pokazuje koszt sesji w tokenach i szacunkowej cenie USD. Użyj gdy chcesz wiedzieć "ile kosztowała ta sesja", "ile tokenów użyłem", "jaki był koszt zadania", "pokaż zużycie tokenów", "koszt sesji".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Twoje zadanie
 
 Wygeneruj raport kosztów bieżącej sesji na podstawie dostępnych
@@ -62,41 +64,14 @@ było zużyć mniej tokenów przy tym samym zadaniu.
 ## Format wyświetlania w CLI
 
 ════════════════════════════════════
-     KOSZT SESJI — [data i godzina po polsku]
+KOSZT SESJI — [data]
 ════════════════════════════════════
-
-📊 ZUŻYCIE TOKENÓW
-  Input tokens:      ~X,XXX  ($3.00/1M)
-  Output tokens:     ~X,XXX  ($15.00/1M)  ← najdroższy
-  Cache write:       ~X,XXX  ($3.75/1M)
-  Cache read:        ~X,XXX  ($0.30/1M)   ← najtańszy
-  ──────────────────────────────────────
-  Łącznie tokenów:   ~X,XXX
-
-💰 KOSZT SZCZEGÓŁOWY
-  Input:        $X.XX
-  Output:       $X.XX  ← zazwyczaj dominuje
-  Cache write:  $X.XX
-  Cache read:   $X.XX
-  ──────────────────
-  ŁĄCZNIE:      $X.XX  (~X.XX PLN)
-
-  % output w koszcie:  XX%
-  % cache w tokenach:  XX%
-
-🤖 MODELE UŻYTE W SESJI
-  Główny model: claude-sonnet-4-6
-  Agenci: [model agenta jeśli inny / brak]
-  Przełączenia: X razy
-
-⚡ NAJWIĘKSZE ZUŻYCIE
-  • [operacja — typ tokenów]: ~XX% tokenów
-
-💡 WSKAZÓWKA
-  [konkretna wskazówka jak oszczędzić]
-
-════════════════════════════════════
-ŁĄCZNIE: ~X,XXX tokenów | $X.XX | ~X.XX PLN
+Tokeny:  [in]in / [out]out / [cr]cr / [cw]cw
+Koszt:   $[USD] (~[PLN] PLN) | output=[X]% kosztu
+Model:   [model] | przełączenia: [X]
+Sesja:   [największe zużycie — 1 zdanie]
+Wskaz:   [1 zdanie jak oszczędzić]
+Agenci:  [lista lub —]  Skille: [lista lub —]  MCP: [N] ops
 ════════════════════════════════════
 
 ---
@@ -120,29 +95,13 @@ Po wyświetleniu raportu w CLI wykonaj automatycznie:
 2. Pobierz wszystkie komentarze tego zadania i policz te które
    zaczynają się od "💰 Koszt sesji". Numer nowej sesji = liczba + 1.
 
-3. Dodaj NOWY komentarz (nigdy nie edytuj istniejących):
+3. Dodaj NOWY komentarz (nigdy nie edytuj istniejących), max 5 linii:
 
----
-💰 Koszt sesji #[numer] — [data i godzina]
-
-📊 Tokeny:
-  Input:       [X] | Output:      [X]
-  Cache write: [X] | Cache read:  [X]
-  Łącznie:    [X]
-
-💵 Koszt: $[USD] (~[PLN] PLN)
-  (input $[X] + output $[X] + cache $[X])
-
-🤖 Model: [nazwa modelu]
-  Agenci: [model agenta jeśli inny / brak]
-  Przełączenia modeli: [X]
-
-⚡ Największe zużycie: [operacja — typ tokenów]
-💡 Wskazówka: [jak oszczędzić następnym razem]
-🤖 Agenci: [lista lub "brak"]
-📚 Skille: [lista lub "brak"]
-🔌 MCP: [lista lub "brak"]
----
+💰 Koszt sesji #[numer] — [data]
+Tokeny: [in]in/[out]out/[cr]cr | $[USD] (~[PLN]PLN) | Output=[X]%
+Model: [model] | Agenci: [lista|—]
+Skille: [lista|—] | MCP: [N] ops
+Wskaz: [1 zdanie]
 
 Jeśli nie ma aktywnego zadania w "W trakcie" — NIE zapisuj komentarza.
 Wyświetl ostrzeżenie i zakończ:

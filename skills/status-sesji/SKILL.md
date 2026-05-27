@@ -2,6 +2,8 @@
 description: Pokazuje co aktualnie działa w tle — którzy agenci są aktywni, jakie skille zostały użyte w tej sesji, i jakie narzędzia MCP są podłączone. Użyj gdy chcesz wiedzieć "co teraz robi Claude", "jakich agentów używasz", "które skille były użyte", "pokaż status sesji", "co jest aktywne".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Twoje zadanie
 
 Wygeneruj przejrzysty raport statusu bieżącej sesji.
@@ -36,25 +38,13 @@ Krótkie zdanie w formacie:
 
 ## Format wyświetlania w CLI
 
-Wyświetl raport w czytelnym formacie z separatorami, np:
-
 ════════════════════════════════════
-        STATUS SESJI — [data i godzina po polsku]
+STATUS SESJI — [data]
 ════════════════════════════════════
-
-🤖 AGENCI
-  ✅ kod-reviewer — sprawdził index.html, zakończony
-  ⏳ bug-hunter   — w trakcie analizy
-
-📚 SKILLE
-  ✅ /nowa-funkcja — użyty do stworzenia index.html
-  ✅ /napisz-testy — użyty do testów modułu X
-
-🔌 MCP
-  ✅ Todoist — aktywny, ostatnia operacja: dodano komentarz do Etap 1
-
-════════════════════════════════════
-SESJA: kod-reviewer, bug-hunter | /nowa-funkcja, /napisz-testy | Todoist
+Agenci:  [nazwa — status] lub —
+Skille:  [lista wywołanych] lub —
+MCP:     [ostatnia operacja] lub —
+Sesja:   [agenci] | [skille] | [MCP ops]
 ════════════════════════════════════
 
 ---
@@ -66,16 +56,9 @@ Po wyświetleniu raportu w CLI — znajdź aktywne zadanie w sekcji
 sekcja W trakcie: 6gj92pQqwMR2C3jq) i dodaj do niego komentarz
 z pełnym raportem statusu.
 
-Format komentarza:
----
-🔍 Status sesji [data i godzina]
-
-🤖 Agenci: [lista lub "brak"]
-📚 Skille: [lista lub "brak"]
-🔌 MCP: [lista lub "brak"]
-
-[pełny raport]
----
+Format komentarza (max 2 linie):
+🔍 Status — [data]
+Agenci: [lista|—] | Skille: [lista|—] | MCP: [ostatnia op]
 
 Jeśli nie ma aktywnego zadania w "W trakcie" — NIE zapisuj komentarza.
 Wyświetl ostrzeżenie i zakończ:

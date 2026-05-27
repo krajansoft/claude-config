@@ -1,6 +1,9 @@
 ---
 description: Podsumowuje bieżącą sesję pracy. Użyj gdy chcesz wiedzieć co zrobiłeś, gdy kończysz pracę, gdy chcesz napisać wiadomość commit, lub gdy pytasz "co dzisiaj zrobiłem" / "co zrobiłem w tej sesji" / "podsumuj sesję".
 ---
+
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Status projektu
 !`git status --short`
 ## Co się zmieniło (lista plików)
