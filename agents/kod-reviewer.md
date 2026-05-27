@@ -19,11 +19,10 @@ W przeciwnym razie użyj **Standardowego Review**.
 
 Wywołany gdy: użytkownik mówi "PR review", "tryb PR", /po-pr wywołuje ten agent.
 
-### Krok 1 — Pobierz diff
-Uruchom (Bash): `git -C "C:\Users\adamk\.claude" diff master...HEAD --stat`
-Następnie: `git -C "C:\Users\adamk\.claude" diff master...HEAD`
+Diff i branch są dostarczone w treści polecenia — nie musisz uruchamiać git.
+Oceń dostarczony diff według checklisty poniżej. Nie zadawaj pytań.
 
-### Krok 2 — Sprawdź checklist 12 punktów
+### Krok 1 — Sprawdź checklist 12 punktów na podstawie dostarczonego difu
 
 **Grupa A — Skille/Agenci**
 A1. Każdy zmodyfikowany skill ma linię `> ZASADA: Odpowiadaj zwięźle`
