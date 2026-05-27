@@ -20,7 +20,7 @@ Jeśli $ARGUMENTS to opis — użyj go bezpośrednio do oceny.
 - Niejasność przyczyny: 1=jasna, 2=wymaga dochodzenia, 3=nieznana
 - Zależności zewnętrzne: 1=brak, 2=Todoist MCP, 3=gh/git/PS hooks
 
-Suma punktów → ryzyko ogólne:
+Suma punktów (min=4, max=12) → ryzyko ogólne:
 - 4-6:  NISKIE
 - 7-9:  ŚREDNIE
 - 10-12: WYSOKIE

@@ -25,10 +25,14 @@ Na podstawie $ARGUMENTS oceń wagę i źródło:
 - CONFIG — błąd w konfiguracji
 - HUMAN — błąd użytkownika
 
-### Krok 2 — Estymata kosztu naprawy
-- DROBNY P3:    ~5k tokenów   (~$0.10)
-- POWAŻNY P2:   ~20k tokenów  (~$0.40)
-- KRYTYCZNY P1: ~50k tokenów  (~$1.00)
+### Krok 2 — Estymata kosztu naprawy (orientacyjne)
+- DROBNY P3:    ~5k tokenów   → ~$0.10  (~0.40 PLN)
+- POWAŻNY P2:   ~20k tokenów  → ~$0.40  (~1.60 PLN)
+- KRYTYCZNY P1: ~50k tokenów  → ~$1.00  (~4.00 PLN)
+
+### Krok 2b — Sprawdź duplikat
+Przez MCP find-tasks searchText="BUG:" w sekcji Bugi (6gj92pQjFpC8gfrH).
+Jeśli znaleziono podobny bug (zbliżony opis) — poinformuj: "Podobny bug już istnieje: [nazwa]" i zapytaj "Zgłosić nowy mimo to?"
 
 ### Krok 3 — Utwórz task w Todoist
 Przez MCP utwórz task:

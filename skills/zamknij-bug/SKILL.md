@@ -21,7 +21,7 @@ Przez MCP add-comments dodaj do taska buga:
 ✅ Naprawiono — [data]
 Przyczyna: [1 zdanie — root cause]
 Naprawa: [1 zdanie — co zmieniono i w jakim pliku]
-Koszt naprawy: [pobierz z ostatniego 💰 komentarza aktywnego taska lub "nieznany"]
+Koszt naprawy: [pobierz kwotę z ostatniego komentarza "💰 Koszt sesji" w aktywnym tasku sekcji W trakcie (6gj92pQqwMR2C3jq) lub wpisz "nieznany"]
 Wniosek: [1 zdanie — jak zapobiec podobnym błędom]
 ```
 
@@ -39,6 +39,10 @@ Przyczyna: [1 zdanie]
 Koszt naprawy: [kwota lub "nieznany"]
 Wniosek: [1 zdanie jak zapobiec]
 ```
+
+### Krok 4b — Sprawdź czy kontynuować workflow
+Po zamknięciu buga — jeśli naprawiałeś w ramach aktywnego taska (W trakcie), przypomnij:
+"Następny krok: /po-pr żeby zamknąć branch z naprawą."
 
 ### Krok 5 — Wyświetl potwierdzenie
 ```

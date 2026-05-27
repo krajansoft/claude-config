@@ -34,7 +34,7 @@ Wykonaj w tej kolejności:
 1. Pobierz taski z Todoist — sekcje Backlog (6gj92pW5rVJc9vcq), W trakcie (6gj92pQqwMR2C3jq) i **Bugi (6gj92pQjFpC8gfrH)**, projekt 6gj92jFJMwm2RmFq
 2. Sprawdź KRYTYCZNE bugi (P1) w sekcji Bugi — jeśli są, umieść je NA POCZĄTKU listy tasków oznaczone jako 🔴 KRYTYCZNY BUG
 3. Sprawdź aktualną godzinę — czy jesteśmy w szczycie (14:00–20:00 PL)?
-4. Dla każdego taska P1 oszacuj koszt na podstawie opisu (heurystyki z AGENT.md)
+4. Dla każdego taska P1 oszacuj koszt na podstawie opisu (heurystyki z po-knowledge.md)
 5. Ułóż plan sesji który mieści się w ~$5 (typowy budżet 5-godzinny)
 6. Przeczytaj C:\Users\adamk\.claude\agents\po\po-knowledge.md przed estymacją
 
@@ -44,9 +44,9 @@ Wykonaj w tej kolejności:
 ════════════════════════════════════
 PLAN SESJI — [data] [godzina] [szczyt/poza szczytem]
 Budżet:  ~$5.00 dostępne szacunkowo
-Zadania: [N] P1 | [N] P2 | [N] P3 | Bugi: [N]🔴 [N]🟡 [N]🟢
+Zadania: [N] P1 | [N] P2 | [N] P3[jeśli bugi > 0: | Bugi: [N]🔴 [N]🟡 [N]🟢]
 
-[jeśli są P1 bugi:]
+[tylko jeśli są P1 bugi w sekcji Bugi:]
 0. 🔴 KRYTYCZNY BUG: [nazwa] — est. $X.XX — sonnet
 1. [nazwa taska] — est. $X.XX — [model: haiku/sonnet/opus]
 2. [nazwa taska] — est. $X.XX — [model]
