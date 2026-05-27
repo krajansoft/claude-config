@@ -144,7 +144,10 @@ Po wyświetleniu raportu w CLI wykonaj automatycznie:
 🔌 MCP: [lista lub "brak"]
 ---
 
-Jeśli nie ma aktywnego zadania w "W trakcie" — dodaj komentarz
-do projektu zamiast do zadania.
+Jeśli nie ma aktywnego zadania w "W trakcie" — NIE zapisuj komentarza.
+Wyświetl ostrzeżenie i zakończ:
+
+⚠️ Brak aktywnego taska w 'W trakcie' — komentarz kosztowy nie został zapisany.
+Uruchom /po-plan żeby wskazać task sesji przed zapisem kosztów.
 
 Nie pytaj o pozwolenie — wykonaj automatycznie.

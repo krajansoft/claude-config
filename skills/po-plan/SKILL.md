@@ -2,6 +2,22 @@
 description: Główna komenda startowa sesji PO. Pobiera taski z Todoist, sprawdza budżet, szacuje koszty P1 i układa plan sesji. Użyj na początku każdej sesji kodowania lub gdy pytasz "co robić dziś", "zaplanuj sesję", "po-plan".
 ---
 
+## KROK 0 — Weryfikacja aktywnego taska (WYKONAJ PIERWSZY)
+
+Przed wygenerowaniem planu sprawdź czy sesja ma kontekst kosztowy:
+
+1. Sprawdź przez Todoist MCP sekcję 'W trakcie' (ID: 6gj92pQqwMR2C3jq)
+2. Jeśli TAK (jest task) — kontynuuj normalnie do "Twoje zadanie" poniżej
+3. Jeśli NIE — zatrzymaj się:
+   a. Pobierz taski P1 i P2 z Backlogu (ID: 6gj92pW5rVJc9vcq)
+   b. Wyświetl listę numerowaną: numer, nazwa taska, priorytet
+   c. Zapytaj użytkownika: "Który task zaczynamy? (podaj numer lub ID)"
+   d. Poczekaj na odpowiedź użytkownika
+   e. Przenieś wskazany task do sekcji 'W trakcie' przez MCP (sectionId: 6gj92pQqwMR2C3jq)
+   f. Kontynuuj do generowania planu
+
+---
+
 ## Twoje zadanie
 
 Wykonaj w tej kolejności:
