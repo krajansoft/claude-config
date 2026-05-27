@@ -42,7 +42,7 @@ Poczekaj 2 sekundy aż formatowanie się zakończy.
 Po potwierdzeniu wykonaj przez Bash tool — użyj DOKŁADNEGO commit message zatwierdzonego w Kroku 4 (NIE placeholder):
 Krok 6a: `git add -A`
 Krok 6b: `git commit -m "$(cat <<'EOF'
-[wstaw tutaj zatwierdzony commit message z Kroku 3]
+[wstaw tutaj zatwierdzony commit message z Kroku 3/4]
 EOF
 )"`
 Pokaż wynik i potwierdź że commit się udał.
