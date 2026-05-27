@@ -20,8 +20,9 @@ stats-cache.json
 settings.json
 settings.local.json
 
-# Hooki - zawierają ścieżki specyficzne dla tego komputera
-hooks/
+# Hooki - pliki runtime (flagi stanu) nie wersjonowane
+hooks/.hooks-paused
+hooks/.formatting-active
 
 # System
 .DS_Store
