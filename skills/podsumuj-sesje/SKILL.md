@@ -11,8 +11,8 @@ description: Podsumowuje bieżącą sesję pracy. Użyj gdy chcesz wiedzieć co 
 ## Ostatnie 5 commitów
 !`git log --oneline -5`
 ## Branch i PR (claude-config)
-!`cd C:\Users\adamk\.claude && git branch --show-current`
-!`cd C:\Users\adamk\.claude && gh pr view --json url -q .url 2>nul || echo Brak aktywnego PR`
+!`git -C "C:\Users\adamk\.claude" branch --show-current`
+!`git -C "C:\Users\adamk\.claude" log --oneline -1`
 ## Twoje zadanie
 Na podstawie danych powyżej stwórz podsumowanie sesji:
 1. **Co zostało zrobione** — 3-5 konkretnych punktów
