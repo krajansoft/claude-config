@@ -10,6 +10,9 @@ description: Podsumowuje bieżącą sesję pracy. Użyj gdy chcesz wiedzieć co 
 !`git diff HEAD --stat`
 ## Ostatnie 5 commitów
 !`git log --oneline -5`
+## Branch i PR (claude-config)
+!`cd C:\Users\adamk\.claude && git branch --show-current`
+!`cd C:\Users\adamk\.claude && gh pr view --json url,title,state --jq '"PR: \(.title) | \(.state) | \(.url)"' 2>$null || echo "Brak aktywnego PR"`
 ## Twoje zadanie
 Na podstawie danych powyżej stwórz podsumowanie sesji:
 1. **Co zostało zrobione** — 3-5 konkretnych punktów

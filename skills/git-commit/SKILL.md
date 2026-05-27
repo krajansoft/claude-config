@@ -9,6 +9,12 @@ description: Przegląda zmiany i tworzy commit z dobrym opisem. Wywołuj ręczni
 !`git diff HEAD --stat`
 ## Procedura commitowania
 Wykonaj kroki w tej kolejności:
+### Krok 0: Sprawdź gałąź
+!`git branch --show-current`
+Jeśli wynik to "master" lub "main":
+⚠️ OSTRZEŻENIE: Commitowanie bezpośrednio na głównej gałęzi!
+Wyświetl ostrzeżenie i zapytaj: "Kontynuować mimo to? (tak/nie)"
+Poczekaj na odpowiedź użytkownika. Jeśli "nie" — zakończ.
 ### Krok 1: Sprawdź czy jest co commitować
 Jeśli `git status` pokazuje "nothing to commit" — poinformuj użytkownika i zakończ.
 ### Krok 2: Pokaż podsumowanie zmian
