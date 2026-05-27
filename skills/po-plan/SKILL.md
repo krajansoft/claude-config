@@ -14,11 +14,13 @@ Przed wygenerowaniem planu sprawdź czy sesja ma kontekst kosztowy:
    c. Zapytaj użytkownika: "Który task zaczynamy? (podaj numer lub ID)"
    d. Poczekaj na odpowiedź użytkownika
    e. Przenieś wskazany task do sekcji 'W trakcie' przez MCP (sectionId: 6gj92pQqwMR2C3jq)
-   f. Utwórz branch dla taska w repo claude-config:
+   f. Utwórz branch dla taska w repo claude-config (użyj Bash tool):
       Format: task/[pierwsze-8-znaków-ID]-[slug-nazwy-max-30]
       Slug: tytuł lowercase, spacje i znaki specjalne → myślniki
       Przykład ID 6gjGGWxHJfWrMCFq → task/6gjGGWxH-workflow-git-branch-pr
-      !`cd C:\Users\adamk\.claude && git checkout master 2>$null; git checkout -b task/[ID8]-[slug] 2>$null || git checkout task/[ID8]-[slug]`
+      Uruchom: git -C "C:\Users\adamk\.claude" checkout master
+      Uruchom: git -C "C:\Users\adamk\.claude" checkout -b task/[ID8]-[slug]
+      Jeśli branch istnieje: git -C "C:\Users\adamk\.claude" checkout task/[ID8]-[slug]
       Wyświetl: "🌿 Branch: task/[ID8]-[slug]"
    g. Dodaj komentarz do taska przez MCP: "🌿 Branch: task/[ID8]-[slug]"
    h. Kontynuuj do generowania planu
