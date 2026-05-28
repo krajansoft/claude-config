@@ -2,6 +2,8 @@
 description: Bieżący raport statusu sesji — ile tokenów wydano, co zrobiono, co jest następne. Użyj w trakcie sesji gdy pytasz "jak idzie", "ile zostało", "status", "po-status".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Twoje zadanie
 
 Na podstawie bieżącej sesji i danych z Todoist oceń:

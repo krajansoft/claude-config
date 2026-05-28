@@ -2,6 +2,8 @@
 description: Szacuje koszt taska przed realizacją. Użyj gdy chcesz wiedzieć ile będzie kosztował task, jakie tokeny zużyje, jaki model wybrać. Podaj nazwę taska lub ID jako argument: /po-estymuj <nazwa lub ID>.
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Twoje zadanie
 
 Argument (jeśli podany): ## Input

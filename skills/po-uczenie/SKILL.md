@@ -2,6 +2,8 @@
 description: Uczy się na podstawie różnicy między estymacją a rzeczywistym kosztem i zapisuje wnioski do po-knowledge.md. Wywołuj po każdym /podsumuj-sesje lub gdy pytasz "zapisz wnioski", "po-uczenie", "zaktualizuj wiedzę PO".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Twoje zadanie
 
 Wykonaj w tej kolejności:
