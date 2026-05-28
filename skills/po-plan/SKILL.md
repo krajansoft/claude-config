@@ -2,6 +2,8 @@
 description: Główna komenda startowa sesji PO. Pobiera taski z Todoist, sprawdza budżet, szacuje koszty P1 i układa plan sesji. Użyj na początku każdej sesji kodowania lub gdy pytasz "co robić dziś", "zaplanuj sesję", "po-plan".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## KROK 0 — Weryfikacja aktywnego taska (WYKONAJ PIERWSZY)
 
 Przed wygenerowaniem planu sprawdź czy sesja ma kontekst kosztowy:

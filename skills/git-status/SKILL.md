@@ -26,3 +26,12 @@ Na podstawie danych powyżej odpowiedz na te pytania:
 4. **Sugestia:** Co warto teraz zrobić — zacommitować zmiany, pobrać zmiany ze zdalnego, czy nic nie trzeba?
 
 Pisz po polsku. Krótko i konkretnie — bez zbędnych szczegółów technicznych.
+
+## Format output (max 6 linii)
+
+```
+Gałąź:   [nazwa] | [ahead/behind/ok vs origin]
+Zmiany:  [N] plików niezacommitowanych [lub: czysto]
+Ostatni: [hash] [commit message]
+Status:  [1 zdanie co warto teraz zrobić]
+```

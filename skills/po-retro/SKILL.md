@@ -2,6 +2,8 @@
 description: Retrospektywa sprintu — podsumowanie ukończonych tasków, analiza dokładności estymacji, wnioski. Wywołuj po ukończeniu grupy tasków lub gdy pytasz "jak poszedł sprint", "po-retro", "retrospektywa".
 ---
 
+> ZASADA: Odpowiadaj zwięźle. Max 3 zdania wyjaśnienia.
+
 ## Twoje zadanie
 
 1. Pobierz taski z sekcji Zrobione (6gj92pRv86Mh4Rvq) projektu 6gj92jFJMwm2RmFq
