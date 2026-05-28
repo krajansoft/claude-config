@@ -32,3 +32,22 @@ Zapis do: po-knowledge.md ✅
 ```
 
 Pisz po polsku. Po wyświetleniu — dopisz wniosek do po-knowledge.md.
+
+## Aktualizacja QUALITY.md (sekcja 9 — Retrospektywa procesu)
+
+Po zapisaniu do po-knowledge.md — zaktualizuj `C:\Users\adamk\.claude\QUALITY.md`:
+
+1. Wczytaj zawartość pliku QUALITY.md.
+2. Znajdź markery `<!-- po-retro:start -->` i `<!-- po-retro:end -->`.
+3. Wstaw nowy blok BEZPOŚREDNIO PRZED `<!-- po-retro:end -->`, zachowując całą wcześniejszą historię między markerami (poprzednie wpisy zostają, dopisujesz tylko najnowszy na końcu):
+
+```
+### Retro [data YYYY-MM-DD]
+Sprint: [N] tasków | koszt: $X.XX | śr. błąd: XX%
+Wzorzec: [1 zdanie — co się powtarza]
+Zmiana procesu: [1 konkretna zmiana w workflow / DoR / DoD]
+```
+
+4. Zapisz plik. Nie modyfikuj reszty QUALITY.md — tylko sekcję po-retro:start/end.
+
+Jeśli markery nie istnieją — wyświetl ostrzeżenie i pomiń krok (nie psuj pliku).

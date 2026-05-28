@@ -15,6 +15,10 @@ Przed wygenerowaniem planu sprawdź czy sesja ma kontekst kosztowy:
    b. Wyświetl listę numerowaną: numer, nazwa taska, priorytet
    c. Zapytaj użytkownika: "Który task zaczynamy? (podaj numer lub ID)"
    d. Poczekaj na odpowiedź użytkownika
+   d2. **Definition of Ready check** — wywołaj `/sprawdz-wymagania [ID wybranego taska]` i wyświetl wynik.
+       - Jeśli wynik `✅ GOTOWY DO STARTU` — kontynuuj do e.
+       - Jeśli wynik `⚠️ NIEGOTOWY` (1-2 braki) — pokaż braki i zapytaj "Uzupełnić teraz czy startować mimo to? (uzupełnić/start)". Czekaj na odpowiedź.
+       - Jeśli wynik `🔴 NIEGOTOWY — KRYTYCZNE braki` (3+ braków) — zatrzymaj się: "Task wymaga uzupełnienia opisu zanim startujemy. Sugerowane akcje: [lista z /sprawdz-wymagania]". Nie przenoś taska.
    e. Przenieś wskazany task do sekcji 'W trakcie' przez MCP (sectionId: 6gj92pQqwMR2C3jq)
    f. Utwórz branch dla taska w repo claude-config (użyj Bash tool):
       Format: task/[pierwsze-8-znaków-ID]-[slug-nazwy-max-30]
