@@ -38,8 +38,8 @@ Pisz po polsku. Po wyświetleniu — dopisz wniosek do po-knowledge.md.
 Po zapisaniu do po-knowledge.md — zaktualizuj `C:\Users\adamk\.claude\QUALITY.md`:
 
 1. Wczytaj zawartość pliku QUALITY.md.
-2. Znajdź sekcję między markerami `<!-- po-retro:start -->` i `<!-- po-retro:end -->`.
-3. Zastąp jej zawartość nowym blokiem (dopisz NA KOŃCU dotychczasowej historii — NIE nadpisuj poprzednich wpisów):
+2. Znajdź markery `<!-- po-retro:start -->` i `<!-- po-retro:end -->`.
+3. Wstaw nowy blok BEZPOŚREDNIO PRZED `<!-- po-retro:end -->`, zachowując całą wcześniejszą historię między markerami (poprzednie wpisy zostają, dopisujesz tylko najnowszy na końcu):
 
 ```
 ### Retro [data YYYY-MM-DD]

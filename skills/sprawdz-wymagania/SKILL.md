@@ -20,7 +20,7 @@ Jeśli ID nieznane lub task nie istnieje — zwróć `⚠️ Task [$ARGUMENTS] n
 Przez `find-comments` (taskId: $ARGUMENTS) pobierz komentarze.
 Szukaj komentarza z linią `💡 ESTYMATA:` (estymata) i `🎯 RYZYKO:` (ryzyko).
 
-### Krok 3 — Sprawdź 6 elementów DoR
+### Krok 3 — Sprawdź 6 elementów DoR (zgodnie z QUALITY.md sekcja 2)
 
 Dla każdego elementu zwróć ✅ lub 🔴 BRAK:
 
@@ -29,7 +29,7 @@ Dla każdego elementu zwróć ✅ lub 🔴 BRAK:
 3. **Kryteria akceptacji** — czy opis ma `## Definicja ukończenia` lub `## GOTOWE GDY` z min. 3 checkboxami `- [ ]`?
 4. **Zależności** — czy opis wspomina inne taski (`po [task]`, `wymaga`, `zależy od`) lub stan systemu (`jeśli`)?
 5. **Estymata** — czy komentarz `💡 ESTYMATA:` istnieje w komentarzach lub w opisie?
-6. **Wartość** — czy opis ma sekcję `## Wartość` z kategorią (Oszczędność czasu / Redukcja kosztów / Jakość / Wiedza)?
+6. **Ryzyko** — czy komentarz `🎯 RYZYKO:` istnieje w komentarzach lub opis ma sekcję `## Ryzyko`?
 
 ### Krok 4 — Wyświetl wynik
 
@@ -44,7 +44,7 @@ Zakres:            [✅/🔴]
 Kryteria akcept.:  [✅/🔴] ([N] punktów)
 Zależności:        [✅/🔴]
 Estymata:          [✅/🔴]
-Wartość:           [✅/🔴]
+Ryzyko:            [✅/🔴]
 ────────────────────────────────────
 WYNIK: [✅ GOTOWY DO STARTU / ⚠️ NIEGOTOWY]
 [jeśli niegotowy:]
