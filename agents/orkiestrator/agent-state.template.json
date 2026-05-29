@@ -1,0 +1,33 @@
+{
+  "task_id": "[ID taska z Todoist]",
+  "task_name": "[nazwa taska]",
+  "started_at": "[timestamp ISO 8601]",
+  "orchestrator": "active",
+  "phase": "analysis",
+  "lock": null,
+  "agents": {
+    "test-writer": {
+      "status": "idle",
+      "started_at": null,
+      "completed_at": null,
+      "result": null,
+      "cost_usd": null
+    },
+    "bug-hunter": {
+      "status": "idle",
+      "started_at": null,
+      "completed_at": null,
+      "result": null,
+      "cost_usd": null
+    },
+    "kod-reviewer": {
+      "status": "idle",
+      "started_at": null,
+      "completed_at": null,
+      "result": null,
+      "cost_usd": null
+    }
+  },
+  "total_cost_usd": null,
+  "final_report": null
+}

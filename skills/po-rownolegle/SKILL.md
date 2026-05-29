@@ -15,6 +15,19 @@ Taski są niezależne jeśli:
 - Nie ma między nimi zależności logicznej (task B nie wymaga wyniku A)
 - Jeden nie modyfikuje konfiguracji której używa drugi
 
+## Wybór trybu pracy (dla pojedynczego taska)
+Oceń rozmiar taska i wybierz tryb:
+- **bez orkiestratora** — task prosty (1 plik, znana technologia): rób sekwencyjnie, narzut nieopłacalny.
+- **orkiestrator** — task średni (2-5 plików): jedna sesja, `/orkiestrator-start` deleguje do subagentów (test-writer + bug-hunter równolegle, potem kod-reviewer).
+- **równoległe terminale** — task duży (5+ plików, wiele technologii) lub wiele niezależnych tasków: osobne terminale (osobny budżet 5h każdy).
+
+Dodaj do outputu linie:
+```
+Tryb: [bez orkiestratora / orkiestrator / równoległe terminale]
+Uzasadnienie: [1 zdanie dlaczego]
+```
+Uwaga: orkiestrator wymaga, by subagenci mieli dostęp do narzędzi. Jeśli środowisko ich blokuje — spadnij do trybu sekwencyjnego.
+
 ## Uwaga o budżecie
 Każdy terminal zużywa osobny budżet 5h. Dwa terminale = dwa budżety.
 Opłaca się tylko gdy zysk czasowy > koszt dodatkowego kontekstu.
