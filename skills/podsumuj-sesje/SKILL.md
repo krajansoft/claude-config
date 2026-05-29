@@ -121,3 +121,9 @@ Jeśli OBIE istnieją — automatycznie wywołaj `/po-uczenie` (bez pytania o po
 (suma `💰 Koszt sesji`) i dopisze wpis do `po-knowledge.md`.
 
 Jeśli brakuje którejkolwiek — pomiń uczenie i odnotuj 1 linią dlaczego (np. "brak estymaty — task sprzed wymuszenia").
+
+## Sprawdzenie alertów
+
+Na samym końcu (po uczeniu) — automatycznie wywołaj `/po-alert-check` (bez pytania o pozwolenie).
+Skill sprawdzi 4 wyzwalacze (budżet 80%, seria błędów estymy >50%, brak commitów 7 dni, droga sesja >$2)
+i utworzy alerty w Backlogu tylko gdy próg spełniony. Wyświetl jego krótki raport pod podsumowaniem.

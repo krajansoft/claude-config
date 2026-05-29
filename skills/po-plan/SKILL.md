@@ -44,6 +44,8 @@ Wykonaj w tej kolejności:
 
 1. Pobierz taski z Todoist — sekcje Backlog (6gj92pW5rVJc9vcq), W trakcie (6gj92pQqwMR2C3jq) i **Bugi (6gj92pQjFpC8gfrH)**, projekt 6gj92jFJMwm2RmFq
 2. Sprawdź KRYTYCZNE bugi (P1) w sekcji Bugi — jeśli są, umieść je NA POCZĄTKU listy tasków oznaczone jako 🔴 KRYTYCZNY BUG
+2b. Sprawdź czy w Backlogu są taski zaczynające się od "🔔 ALERT" — jeśli tak, pokaż je
+    w linii `🔔 Alerty:` NA SAMEJ GÓRZE planu (przed listą zadań), zwięźle (nazwa + priorytet).
 3. Sprawdź aktualną godzinę — czy jesteśmy w szczycie (14:00–20:00 PL)?
 4. Dla każdego taska P1 oszacuj koszt na podstawie opisu (heurystyki z po-knowledge.md)
 5. Ułóż plan sesji który mieści się w ~$5 (typowy budżet 5-godzinny)
@@ -62,6 +64,7 @@ Wykonaj w tej kolejności:
 ════════════════════════════════════
 PLAN SESJI — [data] [godzina] [szczyt/poza szczytem]
 Budżet:  ~$5.00 dostępne szacunkowo
+🔔 Alerty: [taski "🔔 ALERT" z Backlogu — pomiń linię jeśli brak]
 🧬 Pamięć: [1-2 wnioski/współczynniki z project-memory.md — pomiń linię jeśli plik pusty]
 Zadania: [N] P1 | [N] P2 | [N] P3[jeśli bugi > 0: | Bugi: [N]🔴 [N]🟡 [N]🟢]
 
