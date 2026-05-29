@@ -98,13 +98,30 @@ Po wyświetleniu raportu w CLI wykonaj automatycznie:
 2. Pobierz wszystkie komentarze tego zadania i policz te które
    zaczynają się od "💰 Koszt sesji". Numer nowej sesji = liczba + 1.
 
-3. Dodaj NOWY komentarz (nigdy nie edytuj istniejących), max 5 linii:
+2b. **Guard anty-duplikat**: jeśli któryś komentarz "💰 Koszt sesji" ma DZISIEJSZĄ datę
+    (np. zapisany już przez /podsumuj-sesje Krok 0) — NIE dodawaj nowego. Wyświetl notkę
+    "koszt z dziś już zapisany — pomijam" i zakończ bez zapisu.
 
-💰 Koszt sesji #[numer] — [data]
-Tokeny: [in]in/[out]out/[cr]cr | $[USD] (~[PLN]PLN) | Output=[X]%
-Model: [model] | Agenci: [lista|—]
-Skille: [lista|—] | MCP: [N] ops
-Wskaz: [1 zdanie]
+3. Dodaj NOWY komentarz (nigdy nie edytuj istniejących).
+
+   ⚠️ FORMAT JEST OBOWIĄZKOWY — parser analytics.html (`parseCostComment`) czyta DOKŁADNIE
+   te linie. Każde pole w osobnej linii, ze słowami kluczowymi i emoji jak niżej.
+   NIE skracaj, NIE łącz pól w jedną linię — inaczej dashboard pokaże 0/puste.
+
+💰 Koszt sesji #[numer] — [data RRRR-MM-DD]
+Input: [in] | Output: [out]
+Cache write: [cw] | Cache read: [cr]
+Łącznie: [suma tokenów]
+💵 Koszt: ~$[USD] (~[PLN] PLN)
+🤖 Model: [pełne id, np. claude-opus-4-8 / claude-sonnet-4-6 — musi zawierać opus/sonnet/haiku]
+📚 Skille: [/skill1, /skill2 lub: brak]
+🤖 Agenci: [agent1, agent2 lub: brak]
+
+Zasady wartości:
+- Liczby tokenów: same cyfry (przecinki/spacje OK), bez "in"/"out" w środku. Jeśli szacunkowe — poprzedź `~`.
+- Jeśli cache write/read nieznane — wpisz 0.
+- Model MUSI zawierać "opus"/"sonnet"/"haiku" (parser po tym dobiera cennik do przeliczenia kosztu z tokenów).
+- "Skille:" i "Agenci:" — pusto wpisz dokładnie "brak".
 
 Jeśli fallback na Zrobione — dopisz na końcu pierwszej linii: "(zapisano po zamknięciu taska)"
 
