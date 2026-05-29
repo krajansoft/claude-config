@@ -28,6 +28,10 @@ Korekta: typ skill-md na Opus — estymacja OK (~$1.1 za 2-3 edycje skilli + now
 Przyczyna: TRAFNA — UI/JS-małe (link+CSS+tooltip+test) estymowane od razu dla Opus. 3. trafna estymata z rzędu odkąd estymujemy wg modelu.
 Korekta: UI/JS-małe na Opus ≈ $0.6-0.8. Wzorzec potwierdzony: estymata wg modelu wykonania = błąd <10%.
 
+2026-05-30 | Powiadomienia Todoist (/po-alert-check + 2 integracje + test) | est: $1.10 | real: $1.15 | błąd: 5% | kategoria: Inne
+Przyczyna: TRAFNA — skill-md na Opus, 4. trafna z rzędu. Estymacja wg modelu wykonania = stabilnie <10%.
+Korekta: skill-md na Opus baseline ~$1.1-1.15 (nowy skill + 2 edycje + test) — potwierdzony 3 punktami (Pamięć, Predykcja, Powiadomienia).
+
 ## Współczynniki korekcyjne
 
 ### Wybór modelu: Sonnet 4.6 vs Opus 4.8 (NAJWAŻNIEJSZE)

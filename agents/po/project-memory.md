@@ -29,7 +29,7 @@ UI/JS-małe: ×0.65 | podstawa: 2 taski, śr. błąd 46% | PO zakłada więcej i
 2026-05-29 | UI/JS-małe | wzorzec: systematyczne przeszacowanie ~46% (sortowanie tabeli 40%, szlif kanban 51%) — baza już istniała, faktyczny zakres mniejszy
 2026-05-27 | hook-PS | wzorzec: naprawa pojedynczego buga w hooku przeszacowana ~5× (est ~15k, real ~3k tokenów) — 1 punkt danych, za mało na współczynnik
 2026-05-29 | skill-md | wzorzec: zakres trafny, koszt napędził model — est $0.40→real $1.10 przez Opus zamiast Sonnet (1 punkt, brak współczynnika typu)
-2026-05-30 | skill-md | wzorzec: baseline ~$1.0–1.2 na Opus za 2-3 edycje skilli + nowy skill + test (2 punkty: $1.10, $1.15). Estymata wg modelu wykonania = trafna (błąd 5%)
+2026-05-30 | skill-md | wzorzec: baseline ~$1.0–1.2 na Opus za 2-3 edycje skilli + nowy skill + test (3 punkty: $1.10, $1.15, $1.15). Estymata wg modelu wykonania = trafna (błąd 5%, 5%, 4.5%) — SOLIDNA BAZA
 2026-05-29 | UI/JS-duże | wzorzec: duży plik (3233 linie) na Opus → bardzo drogi input; est $0.53→real $2.10 (1 punkt, koszt zdominowany przez model nie typ)
 
 ## Wzorce czasowe
