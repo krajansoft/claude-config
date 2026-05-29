@@ -39,7 +39,7 @@ test('Skill /sprawdz-wymagania istnieje z poprawnym frontmatterem', () => {
   const path = join(CLAUDE_DIR, 'skills', 'sprawdz-wymagania', 'SKILL.md');
   assert.ok(existsSync(path), 'SKILL.md sprawdz-wymagania powinien istnieć');
   const content = readFileSync(path, 'utf8');
-  assert.match(content, /^---\n[\s\S]*?description:[\s\S]*?---/, 'Frontmatter z description wymagany');
+  assert.match(content, /^---\r?\n[\s\S]*?description:[\s\S]*?---/, 'Frontmatter z description wymagany');
   assert.match(content, /argument-hint:/, 'argument-hint w frontmatter wymagany');
 });
 
