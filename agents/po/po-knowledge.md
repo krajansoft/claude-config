@@ -24,6 +24,10 @@ Korekta: duże pliki na Opus = bardzo drogi input — czytaj selektywnie (Grep/o
 Przyczyna: TRAFNA — pierwsza estymata zrobiona od razu wg modelu wykonania (Opus), nie domyślnego Sonnet. Lekcja o modelu zadziałała.
 Korekta: typ skill-md na Opus — estymacja OK (~$1.1 za 2-3 edycje skilli + nowy skill + test). Trzymaj tę bazę.
 
+2026-05-30 | Deep linking błędów (analytics.html) | est: $0.70 | real: $0.71 | błąd: 1% | kategoria: Inne
+Przyczyna: TRAFNA — UI/JS-małe (link+CSS+tooltip+test) estymowane od razu dla Opus. 3. trafna estymata z rzędu odkąd estymujemy wg modelu.
+Korekta: UI/JS-małe na Opus ≈ $0.6-0.8. Wzorzec potwierdzony: estymata wg modelu wykonania = błąd <10%.
+
 ## Współczynniki korekcyjne
 
 ### Wybór modelu: Sonnet 4.6 vs Opus 4.8 (NAJWAŻNIEJSZE)

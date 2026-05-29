@@ -43,3 +43,4 @@ UI/JS-małe: ×0.65 | podstawa: 2 taski, śr. błąd 46% | PO zakłada więcej i
 2026-05-29 | Na Windows git autocrlf zamienia LF→CRLF — regexy frontmatter w testach muszą używać `^---\r?\n`
 2026-05-29 | Dominantą kosztu bywa wybór modelu, nie złożoność — Opus 4.8 ≈ ×4-5 vs Sonnet; dopasuj model do estymaty albo estymuj wg modelu wykonania
 2026-05-30 | Lekcja o modelu zadziałała: estymata robiona od razu wg modelu wykonania (Opus) dała błąd 5% (vs 175-300% gdy estymowano dla Sonnet a robiono na Opus)
+2026-05-30 | Wzorzec potwierdzony 3× z rzędu: estymata wg modelu wykonania → błąd <10% (skill-md 5%, UI/JS-małe deep-linking 1%). To NAJWAŻNIEJSZA dźwignia trafności estymat w tym projekcie.
