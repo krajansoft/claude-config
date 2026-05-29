@@ -98,3 +98,15 @@ Następnie zaktualizuj opis taska w Todoist — dopisz na początku opisu:
 Jeśli linia ze statystyką już istnieje (zaczyna się od "📊 Łącznie:") — zastąp ją nową.
 
 Nie pytaj o pozwolenie — wykonaj automatycznie.
+
+## Automatyczne uczenie się
+
+Po wykonaniu wszystkich kroków powyżej — dla każdego zamkniętego taska sprawdź czy ma OBIE rzeczy:
+- linię `💡 ESTYMATA:` w opisie taska, ORAZ
+- co najmniej jeden komentarz `💰 Koszt sesji #N`.
+
+Jeśli OBIE istnieją — automatycznie wywołaj `/po-uczenie` (bez pytania o pozwolenie).
+`/po-uczenie` porówna estymatę (środek przedziału z `💡 ESTYMATA: $min—$max`) z realnym kosztem
+(suma `💰 Koszt sesji`) i dopisze wpis do `po-knowledge.md`.
+
+Jeśli brakuje którejkolwiek — pomiń uczenie i odnotuj 1 linią dlaczego (np. "brak estymaty — task sprzed wymuszenia").

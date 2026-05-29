@@ -42,4 +42,18 @@ Ryzyko:   [1 zdanie — co może podwyższyć koszt]
 Baza:     [N] podobnych tasków w historii
 ```
 
+## Zapis estymaty (KANONICZNY FORMAT — wymagany)
+
+Jeśli podano ID taska — dopisz estymatę do opisu taska w Todoist (przez MCP) jako
+osobną linię, DOKŁADNIE w tym formacie (parser analytics.html i `/po-uczenie` go szukają):
+
+```
+💡 ESTYMATA: $[min]—$[max] (pewność: [XX]%) | [YYYY-MM-DD]
+```
+
+Przykład: `💡 ESTYMATA: $0.35—$0.55 (pewność: 70%) | 2026-05-29`
+
+- Używaj myślnika `—` (półpauza) między min a max.
+- Jeśli linia `💡 ESTYMATA:` już istnieje w opisie — NIE duplikuj; zostaw istniejącą.
+
 Pisz po polsku. Nie pytaj o potwierdzenie.
