@@ -28,6 +28,8 @@ UI/JS-małe: ×0.65 | podstawa: 2 taski, śr. błąd 46% | PO zakłada więcej i
 # Format: `[data] | [typ] | wzorzec: [opis]`
 2026-05-29 | UI/JS-małe | wzorzec: systematyczne przeszacowanie ~46% (sortowanie tabeli 40%, szlif kanban 51%) — baza już istniała, faktyczny zakres mniejszy
 2026-05-27 | hook-PS | wzorzec: naprawa pojedynczego buga w hooku przeszacowana ~5× (est ~15k, real ~3k tokenów) — 1 punkt danych, za mało na współczynnik
+2026-05-29 | skill-md | wzorzec: zakres trafny, koszt napędził model — est $0.40→real $1.10 przez Opus zamiast Sonnet (1 punkt, brak współczynnika typu)
+2026-05-29 | UI/JS-duże | wzorzec: duży plik (3233 linie) na Opus → bardzo drogi input; est $0.53→real $2.10 (1 punkt, koszt zdominowany przez model nie typ)
 
 ## Wzorce czasowe
 # Format: `[data] | [okno czasowe] | [wpływ na błąd estymy]`
@@ -38,3 +40,4 @@ UI/JS-małe: ×0.65 | podstawa: 2 taski, śr. błąd 46% | PO zakłada więcej i
 2026-05-29 | Background agenci nie mają dostępu do narzędzi w tym setupie — równoległość realizuj przez git worktree + pracę sekwencyjną głównym agentem
 2026-05-29 | Przed estymatą "szlifu wizualnego" sprawdź co już działa w pliku — stary opis często opisuje rzeczy gotowe
 2026-05-29 | Na Windows git autocrlf zamienia LF→CRLF — regexy frontmatter w testach muszą używać `^---\r?\n`
+2026-05-29 | Dominantą kosztu bywa wybór modelu, nie złożoność — Opus 4.8 ≈ ×4-5 vs Sonnet; dopasuj model do estymaty albo estymuj wg modelu wykonania

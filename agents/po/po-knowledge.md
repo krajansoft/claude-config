@@ -12,7 +12,20 @@ Korekta: dla małych UI/JS tasków w istniejącym pliku (1-2 funkcje) mnóż est
 Przyczyna: Większość ficzerów była już zaimplementowana (liczniki, responsive grid) — faktyczny zakres był 4× mniejszy.
 Korekta: przed estymatą sprawdź co już istnieje w pliku — „szlif wizualny" bywa 60% tańszy gdy baza jest dobra
 
+2026-05-29 | Pamięć kontekstu projektu (project-memory.md) | est: $0.40 | real: $1.10 | błąd: 175% | kategoria: Inne
+Przyczyna: Zakres trafny, ale estymata zakładała Sonnet 4.6 a wykonanie poszło na Opus 4.8 (~5× droższy I/O). Koszt szacunkowy (brak telemetrii CLI).
+Korekta: jeśli sesja idzie na Opus — mnóż estymatę Sonnet ×~4-5; estymuj wg modelu wykonania, nie domyślnego.
+
+2026-05-29 | Velocity projektu (sekcja analytics.html) | est: $0.53 | real: $2.10 | błąd: 300% | kategoria: Inne
+Przyczyna: Jw. (Opus zamiast Sonnet) + czytanie dużego pliku 3233 linii podbiło input. Koszt szacunkowy.
+Korekta: duże pliki na Opus = bardzo drogi input — czytaj selektywnie (Grep/offset) albo edytuj na Sonnet.
+
 ## Współczynniki korekcyjne
+
+### Wybór modelu: Sonnet 4.6 vs Opus 4.8 (NAJWAŻNIEJSZE)
+Estymaty bazowe zakładają Sonnet. Wykonanie na Opus 4.8 ≈ **×4-5 koszt** (input i output ~5× droższe).
+Obserwacja (2 taski, 2026-05-29): est $0.40→real $1.10, est $0.53→real $2.10 — oba przez przełączenie na Opus, nie przez zakres.
+Wniosek: dopasuj model do estymaty LUB estymuj wg modelu wykonania. Dla tasków rutynowych trzymaj się Sonnet.
 
 ### Małe UI/JS zmiany w istniejącym pliku (1-3 funkcje, Sonnet 4.6)
 Współczynnik: **×0.65** (tj. estymuj 35% taniej niż intuicja)
