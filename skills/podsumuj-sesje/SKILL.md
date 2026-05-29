@@ -35,13 +35,24 @@ Sekcje:
 ### Krok 0 — Zapisz koszt sesji (WYKONAJ PRZED PRZENIESIENIEM TASKA)
 Znajdź aktywny task w sekcji "W trakcie" (6gj92pQqwMR2C3jq).
 Pobierz jego komentarze i policz te zaczynające się od "💰 Koszt sesji".
-Jeśli NIE MA żadnego komentarza kosztowego z DZISIEJSZEJ daty — dodaj go teraz:
+Jeśli NIE MA żadnego komentarza kosztowego z DZISIEJSZEJ daty — dodaj go teraz.
+
+⚠️ FORMAT OBOWIĄZKOWY — parser analytics.html (`parseCostComment`) czyta DOKŁADNIE te linie.
+Nawet przy braku telemetrii podaj SZACUNKOWE liczby (z `~`), nie tekst — inaczej dashboard pokaże 0:
 
 ```
-💰 Koszt sesji #[liczba+1] — [data]
-Tokeny: dane niedostępne — koszt szacunkowy z /podsumuj-sesje
-Sesja: [1 zdanie co było robione]
+💰 Koszt sesji #[liczba+1] — [data RRRR-MM-DD]
+Input: ~[in] | Output: ~[out]
+Cache write: ~[cw] | Cache read: ~[cr]
+Łącznie: ~[suma]
+💵 Koszt: ~$[USD] (~[PLN] PLN)
+🤖 Model: [pełne id, musi zawierać opus/sonnet/haiku]
+📚 Skille: [/skill1, /skill2 lub: brak]
+🤖 Agenci: [lista lub: brak]
 ```
+
+Wartości: jeśli cache nieznane → 0; model MUSI zawierać opus/sonnet/haiku (parser dobiera cennik);
+puste skille/agenci → wpisz dokładnie "brak". Koszt szacuj z zakresu sesji jeśli brak telemetrii.
 
 Jeśli komentarz kosztowy z dzisiaj JUŻ ISTNIEJE — pomiń ten krok.
 Jeśli sekcja W trakcie jest pusta — pomiń ten krok.
