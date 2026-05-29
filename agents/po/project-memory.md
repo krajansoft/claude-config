@@ -31,6 +31,7 @@ UI/JS-małe: ×0.65 | podstawa: 2 taski, śr. błąd 46% | PO zakłada więcej i
 2026-05-29 | skill-md | wzorzec: zakres trafny, koszt napędził model — est $0.40→real $1.10 przez Opus zamiast Sonnet (1 punkt, brak współczynnika typu)
 2026-05-30 | skill-md | wzorzec: baseline ~$1.0–1.2 na Opus za 2-3 edycje skilli + nowy skill + test (3 punkty: $1.10, $1.15, $1.15). Estymata wg modelu wykonania = trafna (błąd 5%, 5%, 4.5%) — SOLIDNA BAZA
 2026-05-29 | UI/JS-duże | wzorzec: duży plik (3233 linie) na Opus → bardzo drogi input; est $0.53→real $2.10 (1 punkt, koszt zdominowany przez model nie typ)
+2026-05-30 | UI/JS-przebudowa | wzorzec: refaktor istniejącej sekcji (renderBugs→helpery + loadData + HTML) na Opus ≈ $1.3-1.4; refaktor psuje testy zależne od starej struktury — DOLICZ bufor na ich naprawę (est $1.15→real $1.36, błąd 18%)
 
 ## Wzorce czasowe
 # Format: `[data] | [okno czasowe] | [wpływ na błąd estymy]`

@@ -32,6 +32,10 @@ Korekta: UI/JS-małe na Opus ≈ $0.6-0.8. Wzorzec potwierdzony: estymata wg mod
 Przyczyna: TRAFNA — skill-md na Opus, 4. trafna z rzędu. Estymacja wg modelu wykonania = stabilnie <10%.
 Korekta: skill-md na Opus baseline ~$1.1-1.15 (nowy skill + 2 edycje + test) — potwierdzony 3 punktami (Pamięć, Predykcja, Powiadomienia).
 
+2026-05-30 | Lista błędów otwarte/zamknięte (przebudowa sekcji analytics.html) | est: $1.15 | real: $1.36 | błąd: 18% | kategoria: Inne
+Przyczyna: Większy zakres niż mały feature — pełna przebudowa renderBugs + refaktor do helperów + zmiana loadData + naprawa regresji testu (refaktor zepsuł asercję poprzedniego taska). Real trafił w górną część przedziału.
+Korekta: typ UI/JS-PRZEBUDOWA (refaktor istniejącej sekcji) na Opus ≈ $1.3-1.4 — droższy niż UI/JS-małe ($0.7). Przy refaktorze DOLICZ bufor na naprawę testów regresji zależnych od starej struktury.
+
 ## Współczynniki korekcyjne
 
 ### Wybór modelu: Sonnet 4.6 vs Opus 4.8 (NAJWAŻNIEJSZE)
