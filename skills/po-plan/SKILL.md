@@ -48,6 +48,9 @@ Wykonaj w tej kolejności:
 4. Dla każdego taska P1 oszacuj koszt na podstawie opisu (heurystyki z po-knowledge.md)
 5. Ułóż plan sesji który mieści się w ~$5 (typowy budżet 5-godzinny)
 6. Przeczytaj C:\Users\adamk\.claude\agents\po\po-knowledge.md przed estymacją
+7. Przeczytaj C:\Users\adamk\.claude\agents\po\project-memory.md — wybierz 1-2 najważniejsze
+   pozycje (współczynnik korekcyjny pasujący do dzisiejszych tasków LUB świeży wniosek)
+   i pokaż je w linii `🧬 Pamięć:` w output
 
 ## Format output (max 10 linii)
 
@@ -55,6 +58,7 @@ Wykonaj w tej kolejności:
 ════════════════════════════════════
 PLAN SESJI — [data] [godzina] [szczyt/poza szczytem]
 Budżet:  ~$5.00 dostępne szacunkowo
+🧬 Pamięć: [1-2 wnioski/współczynniki z project-memory.md — pomiń linię jeśli plik pusty]
 Zadania: [N] P1 | [N] P2 | [N] P3[jeśli bugi > 0: | Bugi: [N]🔴 [N]🟡 [N]🟢]
 
 [tylko jeśli są P1 bugi w sekcji Bugi:]
