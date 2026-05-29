@@ -13,6 +13,26 @@ Wpisy poniżej `[Unreleased]` są dodawane automatycznie przez `/framework-bump`
 
 ## [Unreleased]
 
+## [1.1.0] — 2026-05-29
+
+### Dodano
+
+- Agent `orkiestrator` (`agents/orkiestrator/AGENT.md`) — koordynacja subagentów w jednej sesji (4 fazy), protokół `agent-state.json` z polem `lock` pod Model 3
+- Skill `/orkiestrator-start` — uruchamia orkiestratora dla aktywnego taska
+- Sekcja „Jak uczy się PO" w `analytics.html` (repo moj-dashboard) — wykres błędu estymat z trendem, grouped bar estymata vs realne, tabela z filtrem/sortowaniem, donut wzorców błędów, timeline per tydzień
+
+### Zmieniono
+
+- `/po-plan` wymusza `💡 ESTYMATA` w KROK 0 (wywołuje `/po-estymuj` gdy brak)
+- `/po-estymuj` zapisuje estymatę w kanonicznym formacie `$min—$max (pewność: X%) | YYYY-MM-DD`
+- `/podsumuj-sesje` automatycznie wywołuje `/po-uczenie` gdy task ma estymatę i koszt
+- `/po-uczenie` zapisuje kategorię błędu (5 kategorii) parsowalną przez analytics
+- `/po-rownolegle` dobiera tryb pracy (bez orkiestratora / orkiestrator / równoległe terminale)
+
+### Naprawiono
+
+- Regresja: regex frontmattera `^---\n` → `^---\r?\n` (CRLF na Windows powodował czerwony master)
+
 ## [1.0.0] — 2026-05-29
 
 ### Dodano
