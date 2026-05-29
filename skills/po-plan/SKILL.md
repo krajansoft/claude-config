@@ -20,6 +20,11 @@ Przed wygenerowaniem planu sprawdź czy sesja ma kontekst kosztowy:
        - Jeśli wynik `⚠️ NIEGOTOWY` (1-2 braki) — pokaż braki i zapytaj "Uzupełnić teraz czy startować mimo to? (uzupełnić/start)". Czekaj na odpowiedź.
        - Jeśli wynik `🔴 NIEGOTOWY — KRYTYCZNE braki` (3+ braków) — zatrzymaj się: "Task wymaga uzupełnienia opisu zanim startujemy. Sugerowane akcje: [lista z /sprawdz-wymagania]". Nie przenoś taska.
    e. Przenieś wskazany task do sekcji 'W trakcie' przez MCP (sectionId: 6gj92pQqwMR2C3jq)
+   e2. **Wymuszenie estymaty** — sprawdź czy opis taska ma linię zaczynającą się od `💡 ESTYMATA:`.
+       - Jeśli JEST — kontynuuj do f.
+       - Jeśli NIE MA — automatycznie wywołaj `/po-estymuj [ID]`, a następnie dopisz wynik do opisu taska w Todoist w formacie:
+         `💡 ESTYMATA: $[min]—$[max] (pewność: [XX]%) | [YYYY-MM-DD]`
+         (dokładnie ten format — parser analytics.html go szuka). Potem kontynuuj do f.
    f. Utwórz branch dla taska w repo claude-config (użyj Bash tool):
       Format: task/[pierwsze-8-znaków-ID]-[slug-nazwy-max-30]
       Slug: tytuł lowercase, spacje i znaki specjalne → myślniki
