@@ -20,6 +20,10 @@ Korekta: jeśli sesja idzie na Opus — mnóż estymatę Sonnet ×~4-5; estymuj 
 Przyczyna: Jw. (Opus zamiast Sonnet) + czytanie dużego pliku 3233 linii podbiło input. Koszt szacunkowy.
 Korekta: duże pliki na Opus = bardzo drogi input — czytaj selektywnie (Grep/offset) albo edytuj na Sonnet.
 
+2026-05-30 | Predykcja problemów (3 skille PO + test) | est: $1.10 | real: $1.15 | błąd: 5% | kategoria: Inne
+Przyczyna: TRAFNA — pierwsza estymata zrobiona od razu wg modelu wykonania (Opus), nie domyślnego Sonnet. Lekcja o modelu zadziałała.
+Korekta: typ skill-md na Opus — estymacja OK (~$1.1 za 2-3 edycje skilli + nowy skill + test). Trzymaj tę bazę.
+
 ## Współczynniki korekcyjne
 
 ### Wybór modelu: Sonnet 4.6 vs Opus 4.8 (NAJWAŻNIEJSZE)
