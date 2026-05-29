@@ -51,6 +51,10 @@ Wykonaj w tej kolejności:
 7. Przeczytaj C:\Users\adamk\.claude\agents\po\project-memory.md — wybierz 1-2 najważniejsze
    pozycje (współczynnik korekcyjny pasujący do dzisiejszych tasków LUB świeży wniosek)
    i pokaż je w linii `🧬 Pamięć:` w output
+8. **Alert predykcji** — dla każdego planowanego taska sprawdź w po-knowledge.md/project-memory.md
+   czy jego typ ma historię >50% przekroczenia (≥2 podobne taski LUB współczynnik ≥1.5/≤0.6).
+   Jeśli tak — dopisz przy tym tasku w liście znacznik `⚠️` i 1 linię alertu pod planem:
+   `⚠️ UWAGA: [typ] historycznie [2x/−40%] vs estymacja — [krótka rada]`
 
 ## Format output (max 10 linii)
 
