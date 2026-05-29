@@ -41,7 +41,7 @@ for (const [name, mustMatch] of SKILLS) {
     const path = join(CLAUDE_DIR, 'skills', name, 'SKILL.md');
     assert.ok(existsSync(path), `SKILL.md ${name} powinien istnieć`);
     const content = readFileSync(path, 'utf8');
-    assert.match(content, /^---\n[\s\S]*?description:[\s\S]*?---/, `Frontmatter z description wymagany w ${name}`);
+    assert.match(content, /^---\r?\n[\s\S]*?description:[\s\S]*?---/, `Frontmatter z description wymagany w ${name}`);
     assert.match(content, mustMatch, `Skill ${name} nie zawiera oczekiwanej treści`);
   });
 }
