@@ -11,12 +11,25 @@ Argument (jeśli podany): ## Input
 Wykonaj w tej kolejności:
 1. Jeśli podano ID taska — pobierz jego pełny opis z Todoist przez MCP
 2. Przeczytaj C:\Users\adamk\.claude\agents\po\po-knowledge.md — szukaj podobnych historycznych tasków
-3. Oszacuj tokeny dla każdego typu:
+3. Przeczytaj C:\Users\adamk\.claude\agents\po\project-memory.md (pamięć projektu):
+   a. Sklasyfikuj task wg "Taksonomia typów tasków" (jedna etykieta, np. UI/JS-małe)
+   b. Sprawdź sekcję "Współczynniki korekcyjne per typ taska" — czy ten typ ma współczynnik
+   c. Przejrzyj "Wzorce kosztów" i "Wnioski o projekcie" pod kątem tego typu
+4. Oszacuj tokeny dla każdego typu (estymata BAZOWA, przed korektą):
    - Input: rozmiar kontekstu (pliki do przeczytania) + instrukcje + historia sesji
    - Output: kod/raporty do wygenerowania
    - Cache: czy sesja będzie wznawiać kontekst?
-4. Wybierz optymalny model na podstawie złożoności
-5. Podaj przedział $min-$max z poziomem pewności
+5. Zastosuj współczynnik korekcyjny z project-memory.md (jeśli typ go ma):
+   skorygowana = bazowa × współczynnik. Jeśli typ nie ma współczynnika — pomiń.
+6. Wybierz optymalny model na podstawie złożoności
+7. Podaj przedział $min-$max (PO korekcie) z poziomem pewności
+
+## Korekta z pamięci projektu (gdy współczynnik zastosowany)
+Jeśli w kroku 5 zastosowałeś współczynnik — dodaj w output linię PRZED "Łącznie":
+```
+🧬 Korekta:  ×[N.NN] ([typ], podstawa: [N tasków]) | bazowa $[X.XX] → $[Y.YY]
+```
+Jeśli brak współczynnika dla typu — nie wyświetlaj tej linii.
 
 ## Heurystyki estymacji
 - Prosty task (1 plik, jasna specyfikacja): input ~20k, output ~3k → ~$0.10
@@ -37,6 +50,7 @@ Model:    [rekomendowany] | alternatywa: [model]
 Input:    ~Xk tokenów ($X.XX)
 Output:   ~Xk tokenów ($X.XX)
 Cache:    ~Xk tokenów ($X.XX)
+🧬 Korekta:  ×[N.NN] ([typ], podstawa: [N tasków]) | bazowa $[X.XX] → $[Y.YY]   ← tylko gdy typ ma współczynnik
 Łącznie:  $X.XX — $X.XX | Pewność: XX%
 Ryzyko:   [1 zdanie — co może podwyższyć koszt]
 Baza:     [N] podobnych tasków w historii
